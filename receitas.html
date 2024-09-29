@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas</title>
+    <link rel="stylesheet" href="css-img/style.css">
+</head>
+<body class="receitas">
+    <div class="header2">
+        <a href="index.html" class="titulo">HOME</a>
+    </div>
+
+    <div class="recipe-container">
+        <center>
+            <div class="header3">
+                <h1 class="encontreSuaReceita">Encontre sua Receita</h1>
+                <input type="text" id="recipe-name" placeholder="Digite o nome da receita" class="caixaDeTexto">
+                <button onclick="showRecipe()" class="botao">Buscar Receita</button>
+            </div>
+            <br><br> <!-- Adicionando quebras de linha -->
+        </center>
+
+        <div id="recipe-details"></div>
+        <br> <!-- Adicionando quebra de linha entre receita e lista de receitas -->
+    
+        <div class="recipe-list">
+            <h2>Receitas Disponíveis</h2>
+            <ul id="recipe-list">
+                <!-- Lista de receitas será adicionada aqui pelo JavaScript -->
+            </ul>
+        </div>
+    </div>    
+
+    <script>
+        const recipes = {
+            'lasanha': {
+                ingredients: ['Massa para lasanha', 'Carne moída', 'Molho de tomate', 'Queijo mussarela', 'Queijo parmesão'],
+                steps: [
+                    'Preaqueça o forno a 190°C.',
+                    'Cozinhe a massa da lasanha conforme as instruções da embalagem.',
+                    'Em uma frigideira, cozinhe a carne moída até dourar.',
+                    'Adicione o molho de tomate à carne e deixe ferver.',
+                    'Em uma forma, faça camadas de massa, mistura de carne e queijos.',
+                    'Asse por 45 minutos.'
+                ]
+            },
+            'pizza': {
+                ingredients: ['Massa de pizza', 'Molho de tomate', 'Queijo mussarela', 'Pepperoni', 'Azeitonas'],
+                steps: [
+                    'Preaqueça o forno a 245°C.',
+                    'Abra a massa de pizza em uma superfície enfarinhada.',
+                    'Espalhe o molho de tomate sobre a massa.',
+                    'Adicione queijo mussarela e os outros ingredientes.',
+                    'Asse por 12-15 minutos.'
+                ]
+            },
+            'feijão tropeiro': {
+                ingredients: ['Feijão carioca', 'Arroz', 'Bacon', 'Linguiça', 'Ovos', 'Cebola', 'Alho', 'Couve'],
+                steps: [
+                    'Cozinhe o feijão e reserve.',
+                    'Frite o bacon e a linguiça em uma panela.',
+                    'Adicione cebola e alho picados e frite até dourar.',
+                    'Misture o arroz e o feijão à panela.',
+                    'Cozinhe os ovos e misture à receita.',
+                    'Refogue a couve e adicione por cima.'
+                ]
+            },
+            'frango à parmegiana': {
+                ingredients: ['Peitos de frango', 'Farinha de rosca', 'Queijo parmesão', 'Molho de tomate', 'Queijo mussarela', 'Ovo'],
+                steps: [
+                    'Empane os peitos de frango em farinha de rosca e ovo.',
+                    'Frite o frango até dourar.',
+                    'Coloque o frango em uma assadeira e cubra com molho de tomate.',
+                    'Adicione queijo parmesão e mussarela por cima.',
+                    'Asse a 180°C por 20 minutos.'
+                ]
+            },
+            'brigadeiro': {
+                ingredients: ['Leite condensado', 'Chocolate em pó', 'Manteiga', 'Chocolate granulado (para cobrir)'],
+                steps: [
+                    'Em uma panela, misture leite condensado, chocolate em pó e manteiga.',
+                    'Cozinhe em fogo baixo, mexendo constantemente até a mistura desgrudar do fundo da panela.',
+                    'Deixe esfriar, enrole em bolinhas e passe no chocolate granulado.'
+                ]
+            },
+            'salada de frutas': {
+                ingredients: ['Maçã', 'Banana', 'Laranja', 'Morango', 'Uva', 'Mel'],
+                steps: [
+                    'Lave e corte as frutas em pedaços.',
+                    'Misture todas as frutas em uma tigela.',
+                    'Regue com mel e mexa delicadamente.',
+                    'Sirva imediatamente ou refrigere até servir.'
+                ]
+            }
+        };
+
+        function showRecipe() {
+            const recipeName = document.getElementById('recipe-name').value.toLowerCase();
+            const recipe = recipes[recipeName];
+
+            if (recipe) {
+                const details = `
+                    <h2>Ingredientes</h2>
+                    <ul>
+                        ${recipe.ingredients.map(ingredient => `<li class="ingredient">${ingredient}</li>`).join('')}
+                    </ul>
+                    <h2>Passo a Passo</h2>
+                    <ol>
+                        ${recipe.steps.map(step => `<li class="step">${step}</li>`).join('')}
+                    </ol>
+                `;
+                document.getElementById('recipe-details').innerHTML = details;
+            } else {
+                document.getElementById('recipe-details').innerHTML = '<p>Receita não encontrada.</p>';
+            }
+        }
+
+        function setupRecipeList() {
+            const recipeListElement = document.getElementById('recipe-list');
+            recipeListElement.innerHTML = Object.keys(recipes).map(recipe =>
+                `<li onclick="selectRecipe('${recipe}')">${recipe.charAt(0).toUpperCase() + recipe.slice(1)}</li>`
+            ).join('');
+        }
+
+        function selectRecipe(recipeName) {
+            document.getElementById('recipe-name').value = recipeName;
+            showRecipe();
+        }
+
+        //Configura a lista de receitas no carregamento da página
+        setupRecipeList();
+    </script>
+</body>
+</html>

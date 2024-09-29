@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API-CEP</title>
+    <link rel="stylesheet" href="css-img/style.css">
+</head>
+<body class="fundo4">
+    <div class="header">
+        <a href="index.html" class="titulo">HOME | </a>
+        <a href="clima.html" class="titulo">Clima | </a>
+        <a href="dolar.html" class="titulo">Dólar | </a>
+    </div>
+
+    <h1 class="titulo2">Cadastro de Usuário</h1>
+
+        <fieldset>
+                <legend>Endereço</legend>
+                <input type="text" id="cep" autocomplete="off" placeholder="Digite o CEP">
+                <br>
+                <br>
+                <input type="text" id="rua" readonly placeholder="Digite a rua">
+                <br>
+                <br>
+                <input type="text" id="bairro" readonly placeholder="Digite o bairro">
+                <br>
+                <br>
+                <input type="text" id="cidade" readonly placeholder="Digite a cidade">
+                <br>
+                <br>
+                <input type="text" id="estado" readonly placeholder="Digite o estado">
+                <br>
+        </fieldset>
+</body>
+<script>
+    //preencher os inputs com arrow functions
+    const preencherFormulario = (endereco) => {
+    document.getElementById("rua").value = endereco.logradouro;
+    document.getElementById("bairro").value = endereco.bairro;
+    document.getElementById("cidade").value = endereco.localidade;
+    document.getElementById("estado").value = endereco.uf;
+}
+//autopreenchimento
+const cepValido = (cep) => {
+    if (cep.length == 8) {
+        return true;
+    } else {
+        return false;
+    }
+}
+//buscar API
+//Com async e await podemos trabalhar com código assíncrono em um estilo mais parecido com o bom e velho código síncrono.
+const pesquisarCep = async () => {
+    const cep = document.getElementById("cep").value;
+    const url = `http://viacep.com.br/ws/${cep}/json/`;
+    if (cepValido(cep)) {
+        const dados = await fetch(url);
+        const endereco = await dados.json();
+            preencherFormulario(endereco);
+        }
+}
+document.getElementById("cep").addEventListener("focusout", pesquisarCep);
+</script>
+</html>

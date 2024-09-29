@@ -1,0 +1,650 @@
+body {
+  background-image: url(fundoUnsplash.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.inicio {
+  margin-bottom: 75px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  opacity: 0;
+  animation: fadeIn 8s forwards;
+  text-decoration: none;
+}
+
+/*TEXTO INTRODUTÓRIO*/
+.inicio2 {
+  font-size: 19px;
+  font-weight: bold;
+  color: #ffffff;
+  opacity: 0;
+  animation: fadeIn 12s forwards;
+  text-decoration: none;
+  margin-top: 250px;
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.7), 
+      0 0 10px rgba(255, 255, 255, 0.6),
+        0 0 15px rgba(255, 255, 255, 0.5),
+          0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.espacoLimite {
+  width: 900px;
+  margin-bottom: 450px;
+  margin-top: 450px;
+}
+
+/*METADE DO CÍRCULO*/
+.half-circle {
+  width: 400px; /* Largura do círculo */
+  height: 200px; /* Metade da altura do círculo */
+  background-color: #ffd000; /* Cor de fundo */
+  border-radius: 0 0 200px 200px; /* Arredonda apenas as bordas inferiores */
+  position: fixed; /* Fixar a posição na tela */
+  top: 0; /* Coloca o círculo no topo da tela */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta a posição horizontal para o centro */
+  display: flex;
+  justify-content: center; /* Alinha horizontalmente o conteúdo interno */
+  align-items: center; /* Alinha verticalmente o conteúdo interno */
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.container {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #ffffff1e;
+  backdrop-filter: blur(5px);
+  width: 500px; /* Definido como fixo, você pode ajustar conforme necessário */
+  position: relative; /* Necessário para usar transform */
+  transition: transform 0.3s ease; /* Transição suave para a propriedade 'transform' */
+}
+
+.imagem {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  margin-top: 10px;
+}
+
+.container:hover {
+  transform: translateY(-25px); /* Move o elemento 25px para cima ao passar o mouse */
+  box-shadow: 0 0 15px #ffd000; /* Brilho de fundo */
+}
+
+.container2 {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #ffffff1e;
+  backdrop-filter: blur(5px);
+  width: 500px; /* Definido como fixo, você pode ajustar conforme necessário */
+  position: relative; /* Necessário para usar transform */
+  transition: transform 0.3s ease; /* Transição suave para a propriedade 'transform' */
+}
+
+.imagem2{
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  margin-top: 10px;
+  height: 241px; /* Altura fixa de 200 pixels */
+}
+
+.container2:hover {
+  transform: translateY(-25px); /* Move o elemento 25px para cima ao passar o mouse */
+  box-shadow: 0 0 15px #ffd000; /* Brilho de fundo */
+}
+
+.container3 {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #ffffff1e;
+  backdrop-filter: blur(5px);
+  width: 500px; /* Definido como fixo, você pode ajustar conforme necessário */
+  position: relative; /* Necessário para usar transform */
+  transition: transform 0.3s ease; /* Transição suave para a propriedade 'transform' */
+}
+
+.container3:hover {
+  transform: translateY(-25px); /* Move o elemento 25px para cima ao passar o mouse */
+  box-shadow: 0 0 15px #ffd000; /* Brilho de fundo */
+}
+
+.imagem3{
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  margin-top: 10px;
+  width: 478px;
+  height: 241px;
+}
+
+.container4 {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #ffffff1e;
+  backdrop-filter: blur(5px);
+  width: 500px; /* Definido como fixo, você pode ajustar conforme necessário */
+  position: relative; /* Necessário para usar transform */
+  transition: transform 0.3s ease; /* Transição suave para a propriedade 'transform' */
+}
+
+.container4:hover {
+  transform: translateY(-25px); /* Move o elemento 25px para cima ao passar o mouse */
+  box-shadow: 0 0 15px #ffd000; /* Brilho de fundo */
+}
+
+.imagem4{
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  margin-top: 10px;
+  width: 478px;
+  height: 241px;
+}
+
+.container5 {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #ffffff1e;
+  backdrop-filter: blur(5px);
+  width: 300px; /* Definido como fixo, você pode ajustar conforme necessário */
+  position: relative; /* Necessário para usar transform */
+  transition: transform 0.3s ease; /* Transição suave para a propriedade 'transform' */
+}
+
+.container5:hover {
+  transform: translateY(-25px); /* Move o elemento 25px para cima ao passar o mouse */
+  box-shadow: 0 0 15px #ffd000; /* Brilho de fundo */
+}
+
+.imagem5{
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  margin-top: 10px;
+}
+
+.container6 {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #ffffff1e;
+  backdrop-filter: blur(5px);
+  width: 300px; /* Definido como fixo, você pode ajustar conforme necessário */
+  position: relative; /* Necessário para usar transform */
+  transition: transform 0.3s ease; /* Transição suave para a propriedade 'transform' */
+}
+
+.container6:hover {
+  transform: translateY(-25px); /* Move o elemento 25px para cima ao passar o mouse */
+  box-shadow: 0 0 15px #ffd000; /* Brilho de fundo */
+}
+
+.imagem6{
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  margin-top: 10px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.descricao {
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 19px;
+  margin: 10px;
+}
+
+.apis {
+  margin-top: 500px;
+}
+
+
+
+
+
+/*BARRA DE CIMA*/
+.header {
+  background-color: rgb(95, 95, 95);
+  width: 98%; /*Diminui a largura para 98% da tela*/
+  padding: 20px;
+  text-align: left;
+}
+
+.titulo {
+  margin-bottom: 75px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  animation: fadeIn 8s forwards;
+  text-decoration: none;
+}
+
+/*DÓLAR*/
+.fundo2 {
+  background-image: url(dolar.webp);
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.borda2 {
+  border: 3px solid #09ff00; 
+  border-radius: 8px; 
+  padding: 20px; 
+  background-color: #00000088; 
+  width: 200px;
+  height: 390px;
+  position: relative; 
+  top: 200px;  
+  backdrop-filter: blur(10px); 
+}
+
+#valorDólar {
+  color: #09ff00;
+  font-size: 37px;
+  position: relative;
+
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#maiorValor {
+  color: #09ff00;
+  font-size: 37px;
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#menorValor {
+  color: #09ff00;
+  font-size: 37px;
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+label {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  position: relative;
+}
+
+
+
+
+
+/*CLIMA*/
+/*Estilizando o header*/
+.fundo1 {
+  background-image: url(Fundo.jpg); /*Imagem de fundo*/
+  background-repeat: no-repeat; /*Impede que a imagem se repita*/
+  background-size: cover; /*Faz com que a imagem cubra todo o fundo*/
+}
+
+.borda {
+  border: 1px solid #000000; /*Borda*/
+  border-radius: 8px; /*Arredondamento dos cantos*/
+  padding: 20px; /*Espaçamento Interno*/
+  background-color: #00000088; /*Fundo*/
+  width: 270px; /*Largura*/
+  position: relative; /*Permite o uso dos comandos "top" e "left"*/
+  top: 200px; /*Move o elemento para baixo*/
+  left: 825px; /*Move o elemento para a direita*/
+  backdrop-filter: blur(10px); /*Aplica um desfoque ao fundo atrás do elemento*/
+}
+
+input[type="text"] {
+  background-color: #ffffff5b; 
+  border-radius: 10px;
+  border-color: rgb(38, 0, 255); /*Cor da borda*/
+  margin-bottom: 10px; /*Adiciona um espaço pixels abaixo de cada caixa de texto*/
+  width: 260px; /*Largura*/
+  height: 25px; /*Altura*/
+}
+
+.botao {
+  background-color: #ffffff; 
+  border-radius: 10px; 
+  color: rgb(38, 0, 255); /*Cor do texto*/
+  padding: 10px 20px; /*Adiciona 10 pixels de espaçamento interno acima e abaixo, e 20 pixels nas laterais*/
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*Fonte*/
+  font-size: 15px; /*Tamanho da fonte*/
+  position: relative;
+  left: 75px;
+}
+
+h1 {
+  position: relative;
+  left: 5px;
+  color: aliceblue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*Fonte*/
+}
+
+
+
+
+
+/*CEP*/
+.fundo4 {
+  background-color: darkgrey;
+}
+
+.titulo2 {
+  position: relative;
+  top: 100px;
+  color: #ffd000;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+fieldset {
+  position: relative;
+  top: 100px;
+  width: 10%; 
+  padding: 20px; 
+  border: 5px solid #ffffff;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin: 0 auto
+}
+
+legend {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*Fonte*/
+  color: #ffffff;
+}
+
+
+
+
+
+/* RECEITAS */
+body {
+  background-color: #f0f0f0; /* Fundo neutro */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header2 {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+.header2 a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header2 a:hover {
+  color: #ffd000;
+}
+
+/* Contêiner principal */
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centralizar a barra de pesquisa e o conteúdo */
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.header3 {
+  background-color: #5f5f5f77;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  width: 520px;
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 30px; /* Espaçamento abaixo da barra de pesquisa */
+}
+
+/* Estilos para a lista e os detalhes das receitas */
+.recipe-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Garantir que ocupe a largura total disponível */
+}
+
+.recipe-list {
+  width: 30%;
+  background-color: #ffffff50;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 20px; /* Espaço entre a lista e os detalhes da receita */
+}
+
+.recipe-list h2 {
+  color: #007bff;
+  text-align: center;
+}
+
+.recipe-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recipe-list li {
+  margin: 10px 0;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  transition: background-color 0.3s ease;
+}
+
+.recipe-list li:hover {
+  background-color: #e0e0e0;
+}
+
+#recipe-details {
+  width: 65%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#recipe-details h2 {
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.ingredient, .step {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.ingredient::before {
+  content: '✔️ ';
+}
+
+.step::before {
+  content: '➡️ ';
+}
+
+/* Estilo do input e do botão de pesquisa */
+.caixaDeTexto {
+  width: calc(100% - 120px);
+  padding: 10px;
+  margin-right: 0px;
+  color: #333;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+}
+
+.caixaDeTexto::placeholder {
+  color: #ffd000;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+
+
+
+
+/*APIBuscaCPF*/
+.bordaDoCPF {
+  background-color: rgba(0, 0, 0, 0.144);
+  border: solid black;
+  border-radius: 10px;
+  width: 900px; /* Ajusta a largura da div ao seu conteúdo */
+  height: fit-content; /* Ajusta a altura da div ao seu conteúdo */
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  color: #ffffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 100px;
+}
+
+.buscarCPF {
+  background-color: #ffffff; 
+  border-radius: 10px; 
+  color: rgb(38, 0, 255); /*Cor do texto*/
+  padding: 10px 20px; /*Adiciona 10 pixels de espaçamento interno acima e abaixo, e 20 pixels nas laterais*/
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*Fonte*/
+  font-size: 15px; /*Tamanho da fonte*/
+}
+
+#valor {
+  width: 900px; /* Ajusta a largura da div ao seu conteúdo */
+  height: 45px;
+  font-size: 30px;
+}
+
+#valor::placeholder {
+  color: #ffffff;
+}
+
+
+
+
+/*E-COMMERCE*/
+/* Estilização do body */
+.musica-body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Cor de fundo neutra */
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilo do título */
+.musica-h1 {
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+/* Estilo do container das músicas */
+#musicas-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaço entre as divs */
+  flex-wrap: wrap; /* Permite quebrar linha se não couber na mesma */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo para cada div de música */
+.musica {
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #ffffff23;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 220px; /* Define uma largura fixa */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza a imagem e botão */
+  transition: transform 0.2s ease-in-out; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse sobre a música */
+.musica:hover {
+  transform: translateY(-10px); /* Eleva a música um pouco */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo das imagens */
+.musica img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Estilo do nome da música */
+.musica .nome {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Estilo do preço */
+.musica .preco {
+  color: #2c3e50;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Estilo do botão de compra */
+.musica button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Mudança de cor do botão ao passar o mouse */
+.musica button:hover {
+  background-color: #2980b9;
+}
+
+/* Estilo da descrição da música */
+.descricaoDaMusica {
+  display: none;
+  text-align: left;
+  font-size: 14px;
+  margin-top: 15px;
+  color: #333;
+  background-color: #fafafa;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  word-wrap: break-word; /* Faz o texto quebrar para a linha de baixo */
+}

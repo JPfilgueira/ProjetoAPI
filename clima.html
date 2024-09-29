@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css-img/style.css">
+</head>
+<body class="fundo1">
+    <div class="header">
+        <a href="index.html" class="titulo">HOME | </a>
+        <a href="dolar.html" class="titulo">Dólar | </a>
+        <a href="cep.html" class="titulo">Cep</a>
+    </div>
+
+    <div class="borda">
+        <h1>Previsão do Tempo</h1>
+        <input type="text" id="cidade" placeholder="Digite o nome da cidade">
+        <button onclick="getWeather()" class="botao">Pesquisar</button>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
